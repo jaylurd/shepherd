@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shepherd | Giving</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  <script src="assets/js/tailwind-config.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Hanken+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/theme.css" />
+</head>
+<body class="bg-surface text-on-surface font-body-md">
+  <div id="sidebar-overlay" class="fixed inset-0 bg-black/30 z-40 lg:hidden"></div>
+  <div class="flex min-h-screen">
+    <aside id="app-sidebar" class="fixed lg:sticky top-0 left-0 z-50 h-screen w-72 shrink-0"></aside>
+    <div class="flex-1 min-w-0">
+      <header class="sticky top-0 z-30 bg-surface/90 backdrop-blur-md border-b border-outline-variant/10 px-4 md:px-8 py-4">
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          <div class="flex items-center gap-3">
+            <button id="sidebar-toggle" class="lg:hidden p-2 rounded-lg hover:bg-surface-container-low"><span class="material-symbols-outlined">menu</span></button>
+            <div>
+              <h1 class="font-display text-headline-md">Giving</h1>
+              <p class="text-label-sm text-on-surface-variant">Tithes, offerings &amp; special projects</p>
+            </div>
+          </div>
+          <button class="btn-primary rounded-full px-5 py-2.5 font-label-md inline-flex items-center gap-2 self-start">
+            <span class="material-symbols-outlined">add</span> Record offering
+          </button>
+        </div>
+      </header>
+      <main class="p-4 md:p-8 space-y-6">
+        <section class="grid sm:grid-cols-3 gap-4">
+          <div class="stat-card relative overflow-hidden">
+            <div class="absolute inset-0 glow-accent opacity-50"></div>
+            <div class="relative">
+              <p class="text-on-surface-variant text-label-md">This Sunday</p>
+              <p class="font-display text-headline-lg mt-1">&#8358;1,240,000</p>
+              <p class="text-sm text-on-surface-variant mt-2">+8% vs last week</p>
+            </div>
+          </div>
+          <div class="stat-card">
+            <p class="text-on-surface-variant text-label-md">June total</p>
+            <p class="font-display text-headline-lg mt-1">&#8358;4,850,000</p>
+            <p class="text-sm text-on-surface-variant mt-2">Tithes: &#8358;3.1M</p>
+          </div>
+          <div class="stat-card">
+            <p class="text-on-surface-variant text-label-md">Building fund</p>
+            <p class="font-display text-headline-lg mt-1">&#8358;12.4M</p>
+            <p class="text-sm text-on-surface-variant mt-2">62% of &#8358;20M goal</p>
+          </div>
+        </section>
+        <div class="grid lg:grid-cols-3 gap-6">
+          <div class="lg:col-span-2 card-elevated p-6">
+            <h2 class="font-display text-headline-md mb-6">Recent transactions</h2>
+            <div class="space-y-4">
+              <div class="flex items-center justify-between p-4 rounded-xl bg-surface-container-low table-row-hover">
+                <div class="flex items-center gap-4">
+                  <div class="p-2 rounded-lg bg-primary/10 text-primary"><span class="material-symbols-outlined">payments</span></div>
+                  <div><p class="font-medium">Sunday tithe &amp; offering</p><p class="text-sm text-on-surface-variant">16 Jun 2026 &middot; 142 givers</p></div>
+                </div>
+                <p class="font-display text-headline-md">&#8358;1.24M</p>
+              </div>
+              <div class="flex items-center justify-between p-4 rounded-xl bg-surface-container-low table-row-hover">
+                <div class="flex items-center gap-4">
+                  <div class="p-2 rounded-lg bg-tertiary-container/30 text-tertiary"><span class="material-symbols-outlined">home</span></div>
+                  <div><p class="font-medium">Building fund pledge</p><p class="text-sm text-on-surface-variant">Bro. Emeka &middot; Bank transfer</p></div>
+                </div>
+                <p class="font-display text-headline-md">&#8358;500,000</p>
+              </div>
+              <div class="flex items-center justify-between p-4 rounded-xl bg-surface-container-low table-row-hover">
+                <div class="flex items-center gap-4">
+                  <div class="p-2 rounded-lg bg-secondary-container/30 text-secondary"><span class="material-symbols-outlined">volunteer_activism</span></div>
+                  <div><p class="font-medium">Welfare support</p><p class="text-sm text-on-surface-variant">Sis. Fatima &middot; Cash</p></div>
+                </div>
+                <p class="font-display text-headline-md">&#8358;25,000</p>
+              </div>
+              <div class="flex items-center justify-between p-4 rounded-xl bg-surface-container-low table-row-hover">
+                <div class="flex items-center gap-4">
+                  <div class="p-2 rounded-lg bg-primary/10 text-primary"><span class="material-symbols-outlined">payments</span></div>
+                  <div><p class="font-medium">Midweek service offering</p><p class="text-sm text-on-surface-variant">12 Jun 2026</p></div>
+                </div>
+                <p class="font-display text-headline-md">&#8358;186,000</p>
+              </div>
+            </div>
+          </div>
+          <div class="card-elevated p-6">
+            <h2 class="font-display text-headline-md mb-4">Receipt delivery</h2>
+            <p class="text-on-surface-variant mb-6">Automated receipts sent after each recorded gift.</p>
+            <div class="space-y-4">
+              <label class="flex items-center justify-between p-4 rounded-xl border border-outline-variant/30">
+                <span class="flex items-center gap-2"><span class="material-symbols-outlined text-green-600">chat</span> WhatsApp</span>
+                <input type="checkbox" checked class="rounded text-primary" />
+              </label>
+              <label class="flex items-center justify-between p-4 rounded-xl border border-outline-variant/30">
+                <span class="flex items-center gap-2"><span class="material-symbols-outlined text-tertiary">mail</span> Email</span>
+                <input type="checkbox" checked class="rounded text-primary" />
+              </label>
+              <label class="flex items-center justify-between p-4 rounded-xl border border-outline-variant/30">
+                <span class="flex items-center gap-2"><span class="material-symbols-outlined">sms</span> SMS</span>
+                <input type="checkbox" class="rounded text-primary" />
+              </label>
+            </div>
+            <button class="mt-6 w-full rounded-full border border-outline-variant py-3 font-label-md hover:bg-surface-container-low transition">Preview receipt template</button>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

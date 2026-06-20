@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shepherd | Dashboard</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  <script src="assets/js/tailwind-config.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Hanken+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/theme.css" />
+</head>
+<body class="bg-surface text-on-surface font-body-md">
+  <div id="sidebar-overlay" class="fixed inset-0 bg-black/30 z-40 lg:hidden"></div>
+  <div class="flex min-h-screen">
+    <aside id="app-sidebar" class="fixed lg:sticky top-0 left-0 z-50 h-screen w-72 shrink-0"></aside>
+
+    <div class="flex-1 min-w-0">
+      <header class="sticky top-0 z-30 bg-surface/90 backdrop-blur-md border-b border-outline-variant/10 px-4 md:px-8 py-4">
+        <div class="flex items-center justify-between gap-4">
+          <div class="flex items-center gap-3">
+            <button id="sidebar-toggle" class="lg:hidden p-2 rounded-lg hover:bg-surface-container-low" aria-label="Open menu">
+              <span class="material-symbols-outlined">menu</span>
+            </button>
+            <div>
+              <h1 class="font-display text-headline-md">Dashboard</h1>
+              <p class="text-label-sm text-on-surface-variant">Sunday, 18 June 2026</p>
+            </div>
+          </div>
+          <div class="flex items-center gap-3">
+            <button class="hidden sm:flex items-center gap-2 px-4 py-2 rounded-full border border-outline-variant hover:bg-surface-container-low transition">
+              <span class="material-symbols-outlined text-lg">download</span>
+              <span class="font-label-md text-label-md">Export report</span>
+            </button>
+            <a href="first-timers.html" class="btn-primary rounded-full px-5 py-2.5 font-label-md text-label-md inline-flex items-center gap-2">
+              <span class="material-symbols-outlined text-lg">person_add</span>
+              Add visitor
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <main class="p-4 md:p-8 space-y-8">
+        <section class="card-elevated p-6 bg-white/95 shadow-lg">
+          <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+            <div>
+              <p class="text-label-sm text-on-surface-variant uppercase tracking-[0.28em] mb-2">Welcome back</p>
+              <h1 class="font-display text-headline-lg">Good evening, Demo</h1>
+              <p class="text-on-surface-variant mt-2">Covenant Chapel Lagos · Friday, 19 June 2026 · Lagos</p>
+            </div>
+            <div class="flex flex-wrap gap-3">
+              <a href="first-timers.html" class="btn-primary rounded-full px-5 py-3 font-label-md inline-flex items-center gap-2">
+                <span class="material-symbols-outlined text-lg">person_add</span>
+                Register first-timer
+              </a>
+              <a href="pipeline.html" class="rounded-full border border-outline-variant px-5 py-3 font-label-md text-on-surface-variant hover:bg-surface-container-low transition inline-flex items-center gap-2">
+                View pipeline
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="grid sm:grid-cols-2 xl:grid-cols-4 gap-4">
+          <div class="stat-card">
+            <div class="flex items-center justify-between mb-4">
+              <div class="p-2 rounded-xl bg-primary/10 text-primary"><span class="material-symbols-outlined">person_add</span></div>
+              <span class="chip chip-gold">10 visitors</span>
+            </div>
+            <p class="text-on-surface-variant text-label-md">First-timers this month</p>
+            <p class="font-display text-headline-lg mt-1">10</p>
+          </div>
+          <div class="stat-card">
+            <div class="flex items-center justify-between mb-4">
+              <div class="p-2 rounded-xl bg-secondary-container/30 text-secondary"><span class="material-symbols-outlined">groups</span></div>
+              <span class="chip chip-green">0%</span>
+            </div>
+            <p class="text-on-surface-variant text-label-md">Converted to members</p>
+            <p class="font-display text-headline-lg mt-1">0</p>
+          </div>
+          <div class="stat-card">
+            <div class="flex items-center justify-between mb-4">
+              <div class="p-2 rounded-xl bg-error-container/30 text-error"><span class="material-symbols-outlined">warning</span></div>
+              <span class="chip chip-red">8 overdue</span>
+            </div>
+            <p class="text-on-surface-variant text-label-md">Follow-ups overdue</p>
+            <p class="font-display text-headline-lg mt-1">8</p>
+          </div>
+          <div class="stat-card">
+            <div class="flex items-center justify-between mb-4">
+              <div class="p-2 rounded-xl bg-tertiary-container/30 text-tertiary"><span class="material-symbols-outlined">schedule</span></div>
+              <span class="chip chip-blue">N/A</span>
+            </div>
+            <p class="text-on-surface-variant text-label-md">Avg days to convert</p>
+            <p class="font-display text-headline-lg mt-1">—</p>
+          </div>
+        </section>
+
+        <section class="grid lg:grid-cols-3 gap-6">
+          <div class="lg:col-span-2 card-elevated p-6">
+            <div class="flex items-center justify-between mb-6">
+              <div>
+                <h2 class="font-display text-headline-md">Recent First-Timers</h2>
+                <p class="text-on-surface-variant text-sm">Visitors needing follow-up this week</p>
+              </div>
+              <a href="first-timers.html" class="text-primary font-label-md hover:underline">View all</a>
+            </div>
+            <div class="overflow-x-auto">
+              <table class="w-full text-left">
+                <thead>
+                  <tr class="text-label-sm text-on-surface-variant border-b border-outline-variant/20">
+                    <th class="pb-3 font-medium">Name</th>
+                    <th class="pb-3 font-medium">Visit date</th>
+                    <th class="pb-3 font-medium">Assigned to</th>
+                    <th class="pb-3 font-medium">Status</th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-outline-variant/10">
+                  <tr class="table-row-hover">
+                    <td class="py-4 font-medium">Chioma Okonkwo</td>
+                    <td class="py-4 text-on-surface-variant">16 Jun 2026</td>
+                    <td class="py-4">Min. Blessing</td>
+                    <td class="py-4"><span class="chip chip-gold">Awaiting call</span></td>
+                  </tr>
+                  <tr class="table-row-hover">
+                    <td class="py-4 font-medium">Emeka Nwosu</td>
+                    <td class="py-4 text-on-surface-variant">16 Jun 2026</td>
+                    <td class="py-4">Min. Daniel</td>
+                    <td class="py-4"><span class="chip chip-green">Contacted</span></td>
+                  </tr>
+                  <tr class="table-row-hover">
+                    <td class="py-4 font-medium">Fatima Bello</td>
+                    <td class="py-4 text-on-surface-variant">15 Jun 2026</td>
+                    <td class="py-4">Min. Grace</td>
+                    <td class="py-4"><span class="chip chip-blue">Home visit</span></td>
+                  </tr>
+                  <tr class="table-row-hover">
+                    <td class="py-4 font-medium">Tunde Adebayo</td>
+                    <td class="py-4 text-on-surface-variant">14 Jun 2026</td>
+                    <td class="py-4">Min. Samuel</td>
+                    <td class="py-4"><span class="chip chip-green">Joined</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="space-y-6">
+            <div class="card-elevated p-6">
+              <h2 class="font-display text-headline-md mb-4">Today's Tasks</h2>
+              <ul class="space-y-4">
+                <li class="flex gap-3">
+                  <input type="checkbox" class="mt-1 rounded border-outline-variant text-primary" />
+                  <div>
+                    <p class="font-medium">Call Chioma Okonkwo</p>
+                    <p class="text-sm text-on-surface-variant">First-timer follow-up</p>
+                  </div>
+                </li>
+                <li class="flex gap-3">
+                  <input type="checkbox" class="mt-1 rounded border-outline-variant text-primary" checked />
+                  <div>
+                    <p class="font-medium line-through text-on-surface-variant">Send Sunday giving report</p>
+                    <p class="text-sm text-on-surface-variant">Finance team</p>
+                  </div>
+                </li>
+                <li class="flex gap-3">
+                  <input type="checkbox" class="mt-1 rounded border-outline-variant text-primary" />
+                  <div>
+                    <p class="font-medium">Youth service reminder</p>
+                    <p class="text-sm text-on-surface-variant">WhatsApp broadcast</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="card-elevated p-6 bg-primary-container/10 border border-primary-container/20">
+              <div class="flex items-center gap-3 mb-3">
+                <span class="material-symbols-outlined text-primary">auto_awesome</span>
+                <h2 class="font-display text-headline-md">Weekly insight</h2>
+              </div>
+              <p class="text-on-surface-variant">Your follow-up completion rose 6% this week. 4 first-timers are ready for membership class.</p>
+              <a href="analytics.html" class="inline-flex items-center gap-1 mt-4 text-primary font-label-md">View analytics <span class="material-symbols-outlined text-lg">arrow_forward</span></a>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

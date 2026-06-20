@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shepherd | Sign Up</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  <script src="assets/js/tailwind-config.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Hanken+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/theme.css" />
+</head>
+<body class="bg-surface text-on-surface font-body-md">
+  <div class="min-h-screen grid lg:grid-cols-2">
+    <section class="hidden lg:flex flex-col justify-between p-12 bg-inverse-surface text-inverse-on-surface">
+      <a href="index.html" class="inline-flex items-center gap-2">
+        <span class="material-symbols-outlined text-primary-fixed-dim text-3xl filled">church</span>
+        <span class="font-display text-headline-md font-bold">Shepherd</span>
+      </a>
+      <div class="space-y-6 max-w-md">
+        <h1 class="font-display text-display leading-tight">Start shepherding with excellence.</h1>
+        <p class="text-inverse-on-surface/75 font-body-lg">Create your ministry workspace in minutes. No credit card required for the Starter plan.</p>
+        <div class="space-y-4">
+          <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary-fixed-dim">check_circle</span><span>First-timer follow-up pipeline</span></div>
+          <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary-fixed-dim">check_circle</span><span>Member directory &amp; departments</span></div>
+          <div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary-fixed-dim">check_circle</span><span>Giving receipts via WhatsApp</span></div>
+        </div>
+      </div>
+      <p class="text-sm text-inverse-on-surface/50">&copy; 2026 Shepherd Church Management</p>
+    </section>
+
+    <section class="flex items-center justify-center p-6 md:p-12">
+      <div class="w-full max-w-md">
+        <div class="lg:hidden mb-8">
+          <a href="index.html" class="inline-flex items-center gap-2">
+            <span class="material-symbols-outlined text-primary text-3xl filled">church</span>
+            <span class="font-display text-headline-md font-bold">Shepherd</span>
+          </a>
+        </div>
+        <div class="mb-8">
+          <p class="text-label-md text-primary uppercase tracking-wider mb-2">Create account</p>
+          <h2 class="font-display text-headline-lg">Join Shepherd</h2>
+          <p class="mt-2 text-on-surface-variant">Set up your church workspace and invite your team.</p>
+        </div>
+        <form class="space-y-4" data-auth-form>
+          <div>
+            <label class="block font-label-md text-label-md mb-2">Church name</label>
+            <input type="text" placeholder="Grace Assembly Lagos" class="input-elegant w-full rounded-xl border border-outline-variant bg-surface-container-low px-4 py-3 outline-none focus:ring-2 focus:ring-primary-container/30" required />
+          </div>
+          <div>
+            <label class="block font-label-md text-label-md mb-2">Full name</label>
+            <input type="text" placeholder="Pastor Adeyemi" class="input-elegant w-full rounded-xl border border-outline-variant bg-surface-container-low px-4 py-3 outline-none focus:ring-2 focus:ring-primary-container/30" required />
+          </div>
+          <div>
+            <label class="block font-label-md text-label-md mb-2">Email address</label>
+            <input type="email" placeholder="admin@ministry.com" class="input-elegant w-full rounded-xl border border-outline-variant bg-surface-container-low px-4 py-3 outline-none focus:ring-2 focus:ring-primary-container/30" required />
+          </div>
+          <div>
+            <label class="block font-label-md text-label-md mb-2">Password</label>
+            <div class="relative">
+              <input type="password" placeholder="Minimum 8 characters" class="input-elegant w-full rounded-xl border border-outline-variant bg-surface-container-low px-4 py-3 outline-none focus:ring-2 focus:ring-primary-container/30" required />
+              <button type="button" data-toggle-password class="absolute right-3 top-1/2 -translate-y-1/2 text-on-surface-variant hover:text-on-surface">
+                <span class="material-symbols-outlined">visibility</span>
+              </button>
+            </div>
+          </div>
+          <label class="flex items-start gap-3 text-sm text-on-surface-variant">
+            <input type="checkbox" class="mt-1 rounded border-outline-variant text-primary focus:ring-primary" required />
+            I agree to the Terms of Service and Privacy Policy
+          </label>
+          <button type="submit" class="btn-primary w-full rounded-full py-3 font-label-md">Create account</button>
+        </form>
+        <p class="mt-6 text-center text-on-surface-variant">
+          Already have an account?
+          <a href="login.html" class="font-semibold text-primary hover:text-on-primary-container">Sign in</a>
+        </p>
+      </div>
+    </section>
+  </div>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

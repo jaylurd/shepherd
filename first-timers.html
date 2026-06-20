@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shepherd | First-Timers</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  <script src="assets/js/tailwind-config.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Hanken+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/theme.css" />
+</head>
+<body class="bg-surface text-on-surface font-body-md">
+  <div id="sidebar-overlay" class="fixed inset-0 bg-black/30 z-40 lg:hidden"></div>
+  <div class="flex min-h-screen">
+    <aside id="app-sidebar" class="fixed lg:sticky top-0 left-0 z-50 h-screen w-72 shrink-0"></aside>
+    <div class="flex-1 min-w-0">
+      <header class="sticky top-0 z-30 bg-surface/90 backdrop-blur-md border-b border-outline-variant/10 px-4 md:px-8 py-4">
+        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+          <div class="flex items-center gap-3">
+            <button id="sidebar-toggle" class="lg:hidden p-2 rounded-lg hover:bg-surface-container-low"><span class="material-symbols-outlined">menu</span></button>
+            <div>
+              <h1 class="font-display text-headline-md">First-Timers</h1>
+              <p class="text-label-sm text-on-surface-variant">Automated follow-up pipeline</p>
+            </div>
+          </div>
+          <button class="btn-primary rounded-full px-5 py-2.5 font-label-md inline-flex items-center gap-2 self-start">
+            <span class="material-symbols-outlined">add</span> New visitor slip
+          </button>
+        </div>
+      </header>
+      <main class="p-4 md:p-8 space-y-6">
+        <div class="grid sm:grid-cols-4 gap-4">
+          <div class="stat-card"><p class="text-on-surface-variant text-label-md">Awaiting contact</p><p class="font-display text-headline-lg mt-1">12</p></div>
+          <div class="stat-card"><p class="text-on-surface-variant text-label-md">In progress</p><p class="font-display text-headline-lg mt-1">18</p></div>
+          <div class="stat-card"><p class="text-on-surface-variant text-label-md">Ready for class</p><p class="font-display text-headline-lg mt-1">9</p></div>
+          <div class="stat-card"><p class="text-on-surface-variant text-label-md">Joined this month</p><p class="font-display text-headline-lg mt-1">8</p></div>
+        </div>
+        <div class="card-elevated p-6">
+          <div class="flex flex-col md:flex-row md:items-center gap-4 mb-6">
+            <input type="search" data-table-search="first-timers-table" placeholder="Search visitors..." class="flex-1 rounded-xl border border-outline-variant bg-surface-container-low px-4 py-3 outline-none focus:border-primary" />
+            <select class="rounded-xl border border-outline-variant bg-surface-container-low px-4 py-3 outline-none">
+              <option>All statuses</option>
+              <option>Awaiting call</option>
+              <option>Contacted</option>
+              <option>Home visit</option>
+              <option>Joined</option>
+            </select>
+          </div>
+          <div class="overflow-x-auto" id="first-timers-table">
+            <table class="w-full text-left">
+              <thead>
+                <tr class="text-label-sm text-on-surface-variant border-b border-outline-variant/20">
+                  <th class="pb-3">Visitor</th>
+                  <th class="pb-3">Phone</th>
+                  <th class="pb-3">Service</th>
+                  <th class="pb-3">Assigned</th>
+                  <th class="pb-3">Status</th>
+                  <th class="pb-3">Next step</th>
+                </tr>
+              </thead>
+              <tbody class="divide-y divide-outline-variant/10">
+                <tr class="table-row-hover" data-row>
+                  <td class="py-4"><div class="font-medium">Chioma Okonkwo</div><div class="text-sm text-on-surface-variant">Victoria Island</div></td>
+                  <td class="py-4">0803 456 7890</td>
+                  <td class="py-4">Sun 16 Jun</td>
+                  <td class="py-4">Min. Blessing</td>
+                  <td class="py-4"><span class="chip chip-gold">Awaiting call</span></td>
+                  <td class="py-4 text-primary font-label-md">Call today</td>
+                </tr>
+                <tr class="table-row-hover" data-row>
+                  <td class="py-4"><div class="font-medium">Emeka Nwosu</div><div class="text-sm text-on-surface-variant">Lekki Phase 1</div></td>
+                  <td class="py-4">0812 998 7766</td>
+                  <td class="py-4">Sun 16 Jun</td>
+                  <td class="py-4">Min. Daniel</td>
+                  <td class="py-4"><span class="chip chip-green">Contacted</span></td>
+                  <td class="py-4 text-primary font-label-md">Schedule visit</td>
+                </tr>
+                <tr class="table-row-hover" data-row>
+                  <td class="py-4"><div class="font-medium">Fatima Bello</div><div class="text-sm text-on-surface-variant">Surulere</div></td>
+                  <td class="py-4">0706 112 3344</td>
+                  <td class="py-4">Sun 15 Jun</td>
+                  <td class="py-4">Min. Grace</td>
+                  <td class="py-4"><span class="chip chip-blue">Home visit</span></td>
+                  <td class="py-4 text-primary font-label-md">Visit Fri 6pm</td>
+                </tr>
+                <tr class="table-row-hover" data-row>
+                  <td class="py-4"><div class="font-medium">Tunde Adebayo</div><div class="text-sm text-on-surface-variant">Ikeja</div></td>
+                  <td class="py-4">0901 223 4455</td>
+                  <td class="py-4">Sun 14 Jun</td>
+                  <td class="py-4">Min. Samuel</td>
+                  <td class="py-4"><span class="chip chip-green">Joined</span></td>
+                  <td class="py-4 text-on-surface-variant">Membership class</td>
+                </tr>
+                <tr class="table-row-hover" data-row>
+                  <td class="py-4"><div class="font-medium">Amina Yusuf</div><div class="text-sm text-on-surface-variant">Yaba</div></td>
+                  <td class="py-4">0809 887 6655</td>
+                  <td class="py-4">Sun 14 Jun</td>
+                  <td class="py-4">Min. Blessing</td>
+                  <td class="py-4"><span class="chip chip-gold">Awaiting call</span></td>
+                  <td class="py-4 text-primary font-label-md">SMS sent</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

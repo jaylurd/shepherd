@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shepherd | Settings</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms"></script>
+  <script src="assets/js/tailwind-config.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Hanken+Grotesk:wght@600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/theme.css" />
+</head>
+<body class="bg-surface text-on-surface font-body-md">
+  <div id="sidebar-overlay" class="fixed inset-0 bg-black/30 z-40 lg:hidden"></div>
+  <div class="flex min-h-screen">
+    <aside id="app-sidebar" class="fixed lg:sticky top-0 left-0 z-50 h-screen w-72 shrink-0"></aside>
+    <div class="flex-1 min-w-0">
+      <header class="sticky top-0 z-30 bg-surface/90 backdrop-blur-md border-b border-outline-variant/10 px-4 md:px-8 py-4">
+        <div class="flex items-center gap-3">
+          <button id="sidebar-toggle" class="lg:hidden p-2 rounded-lg hover:bg-surface-container-low"><span class="material-symbols-outlined">menu</span></button>
+          <div>
+            <h1 class="font-display text-headline-md">Settings</h1>
+            <p class="text-label-sm text-on-surface-variant">Church profile, team &amp; integrations</p>
+          </div>
+        </div>
+      </header>
+      <main class="p-4 md:p-8 max-w-3xl space-y-6">
+        <section class="card-elevated p-6">
+          <h2 class="font-display text-headline-md mb-6">Church profile</h2>
+          <form class="space-y-4">
+            <div>
+              <label class="block font-label-md text-label-md mb-2">Church name</label>
+              <input type="text" value="Grace Assembly Lagos" class="w-full rounded-xl border border-outline-variant bg-surface-container-low px-4 py-3 outline-none focus:border-primary" />
+            </div>
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block font-label-md text-label-md mb-2">City</label>
+                <input type="text" value="Lagos" class="w-full rounded-xl border border-outline-variant bg-surface-container-low px-4 py-3 outline-none focus:border-primary" />
+              </div>
+              <div>
+                <label class="block font-label-md text-label-md mb-2">Denomination</label>
+                <input type="text" value="Pentecostal" class="w-full rounded-xl border border-outline-variant bg-surface-container-low px-4 py-3 outline-none focus:border-primary" />
+              </div>
+            </div>
+            <div>
+              <label class="block font-label-md text-label-md mb-2">Address</label>
+              <textarea rows="2" class="w-full rounded-xl border border-outline-variant bg-surface-container-low px-4 py-3 outline-none focus:border-primary resize-none">12 Admiralty Way, Lekki Phase 1, Lagos</textarea>
+            </div>
+            <button type="button" class="btn-primary rounded-full px-6 py-2.5 font-label-md">Save changes</button>
+          </form>
+        </section>
+
+        <section class="card-elevated p-6">
+          <h2 class="font-display text-headline-md mb-6">Integrations</h2>
+          <div class="space-y-4">
+            <div class="flex items-center justify-between p-4 rounded-xl border border-outline-variant/30">
+              <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-green-600">chat</span>
+                <div>
+                  <p class="font-medium">WhatsApp Business</p>
+                  <p class="text-sm text-on-surface-variant">Connected &middot; +234 801 234 5678</p>
+                </div>
+              </div>
+              <button class="text-primary font-label-md">Configure</button>
+            </div>
+            <div class="flex items-center justify-between p-4 rounded-xl border border-outline-variant/30">
+              <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-tertiary">mail</span>
+                <div>
+                  <p class="font-medium">Email (SendGrid)</p>
+                  <p class="text-sm text-on-surface-variant">Receipts &amp; notifications</p>
+                </div>
+              </div>
+              <button class="text-primary font-label-md">Connect</button>
+            </div>
+            <div class="flex items-center justify-between p-4 rounded-xl border border-outline-variant/30">
+              <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-primary">account_balance</span>
+                <div>
+                  <p class="font-medium">Paystack</p>
+                  <p class="text-sm text-on-surface-variant">Online giving &amp; pledges</p>
+                </div>
+              </div>
+              <button class="text-primary font-label-md">Connect</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="card-elevated p-6">
+          <h2 class="font-display text-headline-md mb-6">Team members</h2>
+          <div class="space-y-3">
+            <div class="flex items-center justify-between p-3 rounded-xl bg-surface-container-low">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center font-bold text-primary">PA</div>
+                <div><p class="font-medium">Pastor Adeyemi</p><p class="text-sm text-on-surface-variant">Admin</p></div>
+              </div>
+              <span class="chip chip-gold">Owner</span>
+            </div>
+            <div class="flex items-center justify-between p-3 rounded-xl bg-surface-container-low">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full bg-secondary-container/40 flex items-center justify-center font-bold text-secondary">MB</div>
+                <div><p class="font-medium">Min. Blessing</p><p class="text-sm text-on-surface-variant">Follow-up lead</p></div>
+              </div>
+              <span class="chip chip-blue">Editor</span>
+            </div>
+          </div>
+          <button class="mt-4 rounded-full border border-outline-variant px-5 py-2.5 font-label-md hover:bg-surface-container-low transition inline-flex items-center gap-2">
+            <span class="material-symbols-outlined">person_add</span> Invite team member
+          </button>
+        </section>
+
+        <section class="card-elevated p-6 border border-error/20">
+          <h2 class="font-display text-headline-md text-error mb-2">Danger zone</h2>
+          <p class="text-on-surface-variant mb-4">Permanently delete your church workspace and all data.</p>
+          <button class="rounded-full border border-error text-error px-5 py-2.5 font-label-md hover:bg-error-container transition">Delete workspace</button>
+        </section>
+      </main>
+    </div>
+  </div>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
