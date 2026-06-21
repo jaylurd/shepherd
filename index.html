@@ -124,7 +124,7 @@
 <body class="bg-surface text-on-surface font-body-md overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
 <!-- TopNavBar -->
 <header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md shadow-sm">
-<nav class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto">
+<nav class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
 <div class="flex items-center gap-2">
 <span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">church</span>
 <span class="font-display text-headline-md text-on-surface tracking-tight font-bold">Shepherd</span>
@@ -135,8 +135,8 @@
 <a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors duration-200" href="#about">About</a>
 </div>
 <div class="flex items-center gap-4">
-<a class="hidden sm:block text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors duration-200" href="login.html">Sign in</a>
-<button class="bg-primary text-on-primary font-label-md text-label-md px-6 py-2.5 rounded-full shadow-sm hover:shadow-md active:scale-95 transition-all duration-200">
+<a class="text-on-surface-variant font-medium font-label-md text-label-md hover:text-primary transition-colors duration-200" href="code.html">Sign in</a>
+<button onclick="window.location.href='code.html'" class="bg-primary text-on-primary font-label-md text-label-md px-6 py-2.5 rounded-full shadow-sm hover:shadow-md active:scale-95 transition-all duration-200">
                     Get Started
                 </button>
 </div>
@@ -144,23 +144,23 @@
 </header>
 <main class="pt-24 hero-gradient">
 <!-- Hero Area -->
-<section class="max-w-container-max mx-auto px-margin-desktop py-20 grid lg:grid-cols-2 gap-16 items-center">
+<section class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-20 grid lg:grid-cols-2 gap-16 items-center">
 <div class="relative z-10">
 <div class="inline-flex items-center gap-2 px-3 py-1 bg-primary-container/10 border border-primary-container/20 rounded-full mb-6">
 <span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
 <span class="font-label-sm text-label-sm text-primary uppercase tracking-wider">Trusted by Nigeria's leading ministries</span>
 </div>
-<h1 class="font-display text-display lg:text-[64px] leading-[1.1] mb-6 text-on-surface">
+<h1 class="font-display text-headline-lg md:text-display lg:text-[64px] leading-[1.1] mb-6 text-on-surface">
                     Never let a <span class="text-primary italic">soul</span> go unnoticed.
                 </h1>
 <p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl">
                     The beautiful follow-up system that helps Nigerian churches welcome first-timers, track every visitor with love, and turn guests into lifelong family.
                 </p>
 <div class="flex flex-wrap gap-4">
-<button class="bg-primary text-on-primary font-label-md text-label-md px-8 py-4 rounded-full shadow-lg hover:shadow-primary/20 hover:-translate-y-0.5 active:scale-95 transition-all">
+<button onclick="window.location.href='code.html'" class="bg-primary text-on-primary font-label-md text-label-md px-8 py-4 rounded-full shadow-lg hover:shadow-primary/20 hover:-translate-y-0.5 active:scale-95 transition-all">
                         Start for free
                     </button>
-<button class="text-on-surface font-label-md text-label-md px-8 py-4 rounded-full border border-outline-variant hover:bg-surface-container-low transition-all flex items-center gap-2 group">
+<button onclick="window.location.href='#features'" class="text-on-surface font-label-md text-label-md px-8 py-4 rounded-full border border-outline-variant hover:bg-surface-container-low transition-all flex items-center gap-2 group">
                         See how it works
                         <span class="material-symbols-outlined text-xl group-hover:translate-x-1 transition-transform">arrow_forward</span>
 </button>
@@ -192,7 +192,7 @@
   <!-- Subtle background glow -->
   <div class="absolute inset-0 bg-gradient-to-r from-transparent via-primary-container/5 to-transparent"></div>
   
-  <div class="max-w-container-max mx-auto px-margin-desktop relative z-10">
+  <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
     <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 lg:gap-24">
       
       <!-- Stat 1 -->
@@ -240,7 +240,7 @@
 
 <!-- "Designed for the modern Church" Section -->
 <section class="py-32 bg-surface-container-high border-y border-outline-variant/30" border-t border-outline-variant/10" id="features" class="bg-surface-container-low">
-  <div class="max-w-container-max mx-auto px-margin-desktop">
+  <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
     <div class="text-center mb-16">
       <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-label-sm uppercase tracking-widest mb-6 border border-primary/20">
         <span class="material-symbols-outlined text-sm">view_cozy</span> Core Features
@@ -311,7 +311,7 @@
 
 <!-- "Built by Ministry Leaders" Section -->
 <section class="py-32 bg-surface border-b border-outline-variant/10">
-  <div class="max-w-container-max mx-auto px-margin-desktop">
+  <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
 
     <div class="grid lg:grid-cols-2 gap-16 items-center">
       <!-- Image placeholder -->
@@ -322,7 +322,7 @@
     
     <!-- Stats and Text -->
     <div>
-      <h2 class="font-display text-[40px] leading-tight text-on-surface mb-12">
+      <h2 class="font-display text-headline-lg md:text-[40px] leading-tight text-on-surface mb-12">
         Built by Ministry Leaders, <br/> for Ministry Leaders.
       </h2>
       
@@ -345,7 +345,7 @@
         </div>
       </div>
 
-      <button class="bg-inverse-surface text-inverse-on-surface font-label-md text-label-md px-8 py-4 rounded-full shadow-md hover:shadow-lg hover:-translate-y-0.5 active:scale-95 transition-all">
+      <button onclick="window.location.href='code.html'" class="bg-inverse-surface text-inverse-on-surface font-label-md text-label-md px-8 py-4 rounded-full shadow-md hover:shadow-lg hover:-translate-y-0.5 active:scale-95 transition-all">
         Get Started with Shepherd
       </button>
     </div>
@@ -356,7 +356,7 @@
 
 <!-- Deep Dive Features -->
 <section class="py-32 bg-surface-container-low-container-high border-y border-outline-variant/30" border-b border-outline-variant/20">
-  <div class="max-w-container-max mx-auto px-margin-desktop">
+  <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
     <!-- Feature 1 -->
     <div class="grid lg:grid-cols-2 gap-16 items-center mb-24">
     <div class="order-2 lg:order-1">
@@ -398,7 +398,7 @@
 
 <!-- Testimonials -->
 <section class="py-32 bg-surface-container-high border-y border-outline-variant/30" border-y border-outline-variant/20">
-  <div class="max-w-container-max mx-auto px-margin-desktop text-center mb-16">
+  <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center mb-16">
     <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-label-sm uppercase tracking-widest mb-6 border border-primary/20">
         <span class="material-symbols-outlined text-sm">forum</span> Testimonials
       </div>
@@ -445,7 +445,7 @@
 
 <!-- Pricing -->
 <section class="py-32 bg-surface border-b border-outline-variant/10">
-  <div class="max-w-container-max mx-auto px-margin-desktop">
+  <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
 
     <div class="text-center mb-16">
       <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-label-sm uppercase tracking-widest mb-6 border border-primary/20">
@@ -468,7 +468,7 @@
         <li class="flex items-center gap-3"><span class="material-symbols-outlined text-outline">check</span> Basic Member Directory</li>
         <li class="flex items-center gap-3"><span class="material-symbols-outlined text-outline">check</span> Manual Contribution Tracking</li>
       </ul>
-      <button class="w-full py-4 rounded-full border border-outline-variant text-on-surface font-label-md hover:bg-surface-container transition-all">Get Started Free</button>
+      <button onclick="window.location.href='code.html'" class="w-full py-4 rounded-full border border-outline-variant text-on-surface font-label-md hover:bg-surface-container transition-all">Get Started Free</button>
     </div>
     
     <!-- Premium Tier -->
@@ -486,7 +486,7 @@
         <li class="flex items-center gap-3"><span class="material-symbols-outlined">check_circle</span> Advanced Financial Analytics</li>
         <li class="flex items-center gap-3"><span class="material-symbols-outlined">check_circle</span> Payment Gateway Integrations</li>
       </ul>
-      <button class="w-full py-4 rounded-full bg-inverse-surface text-inverse-on-surface font-label-md shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all">Start 14-Day Trial</button>
+      <button onclick="window.location.href='code.html'" class="w-full py-4 rounded-full bg-inverse-surface text-inverse-on-surface font-label-md shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all">Start 14-Day Trial</button>
     </div>
   </div>
   </div>
@@ -494,7 +494,7 @@
 
 <!-- FAQ -->
 <section class="py-32 bg-surface-container-low-container-high border-y border-outline-variant/30" border-t border-outline-variant/20">
-  <div class="max-w-3xl mx-auto px-margin-desktop">
+  <div class="max-w-3xl mx-auto px-margin-mobile md:px-margin-desktop">
     <div class="flex justify-center mb-6">
       <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary font-label-sm uppercase tracking-widest border border-primary/20">
         <span class="material-symbols-outlined text-sm">help</span> FAQ
@@ -520,7 +520,7 @@
 </section>
 
 <!-- CTA Section -->
-<section class="py-24 px-margin-desktop">
+<section class="py-24 px-margin-mobile md:px-margin-desktop">
   <div class="max-w-container-max mx-auto bg-primary-container rounded-[40px] p-12 md:p-24 text-center relative overflow-hidden shadow-2xl">
     
     <!-- Abstract shapes -->
@@ -535,10 +535,10 @@
         Join the new era of church management. Fast, efficient, and deeply human.
       </p>
       <div class="flex flex-col sm:flex-row justify-center gap-4">
-        <button class="bg-surface text-on-surface font-label-md text-label-md px-10 py-5 rounded-full shadow-xl hover:bg-white active:scale-95 transition-all">
+        <button onclick="window.location.href='code.html'" class="bg-surface text-on-surface font-label-md text-label-md px-10 py-5 rounded-full shadow-xl hover:bg-white active:scale-95 transition-all">
           Start for Free Today
         </button>
-        <button class="bg-transparent text-on-primary-container border border-on-primary-container/40 font-label-md text-label-md px-10 py-5 rounded-full hover:bg-on-primary-container/10 active:scale-95 transition-all">
+        <button onclick="window.location.href='code.html'" class="bg-transparent text-on-primary-container border border-on-primary-container/40 font-label-md text-label-md px-10 py-5 rounded-full hover:bg-on-primary-container/10 active:scale-95 transition-all">
           Schedule a Call
         </button>
       </div>
@@ -548,7 +548,7 @@
 
 <!-- Expanded Footer -->
 <footer class="bg-surface-container-low dark:bg-inverse-surface pt-20 pb-12">
-  <div class="max-w-container-max mx-auto px-margin-desktop flex flex-col md:flex-row justify-between items-start gap-12 lg:gap-8 mb-16">
+  <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-start gap-12 lg:gap-8 mb-16">
     
     <!-- Brand -->
     <div class="flex flex-col gap-4 max-w-xs">
@@ -586,7 +586,7 @@
     </div>
   </div>
 
-  <div class="max-w-container-max mx-auto px-margin-desktop text-center">
+  <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center">
     <p class="font-body-md text-body-md text-on-surface-variant/60">
       &copy; 2024 Shepherd Church Management. All rights reserved.
     </p>
